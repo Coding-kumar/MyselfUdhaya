@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Udhayakumar V — Talent Acquisition Leader portfolio" />
+  <title>Udhayakumar V | Talent Acquisition Leader</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg2:#0b172b;
+      --card:rgba(15,24,44,.78);
+      --card2:#101c33;
+      --text:#e9eefc;
+      --muted:#a9b7d4;
+      --accent:#7c8cff;
+      --accent2:#49d9c5;
+      --line:rgba(124,140,255,.22);
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:radial-gradient(circle at top,#12213b 0%,var(--bg) 40%,#050b14 100%);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1180px,92vw);margin:0 auto}
+    .nav{
+      position:sticky;top:0;z-index:40;
+      background:rgba(6,12,22,.7);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .navin{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:16px 0
+    }
+    .brand{font-weight:800;letter-spacing:.8px}
+    .menu{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+    .pill{
+      padding:10px 14px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(255,255,255,.03)
+    }
+    .hero{
+      padding:42px 0 24px;
+      display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center
+    }
+    .hero h1{
+      font-size:clamp(2.2rem,5vw,4.0rem);
+      line-height:.95;margin:0 0 14px
+    }
+    .grad{
+      background:linear-gradient(90deg,var(--text),#9eb0ff 45%,#6cf0d8);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .lead{
+      color:var(--muted);font-size:1.02rem;line-height:1.7;max-width:62ch
+    }
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{
+      padding:13px 18px;border-radius:14px;border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(124,140,255,.2),rgba(124,140,255,.06));
+      box-shadow:var(--shadow);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .btn.alt{background:rgba(255,255,255,.03)}
+    .btn.download{
+      background:linear-gradient(180deg,rgba(73,217,197,.22),rgba(73,217,197,.08));
+      border-color:rgba(73,217,197,.35);
+    }
+    .card{
+      background:linear-gradient(180deg,var(--card),rgba(13,21,38,.86));
+      border:1px solid rgba(255,255,255,.07);
+      border-radius:24px;box-shadow:var(--shadow)
+    }
+    .portrait{
+      position:relative;overflow:hidden;padding:12px;max-width:320px;margin-left:auto
+    }
+    .portrait:before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(circle at 30% 20%,rgba(124,140,255,.18),transparent 40%),
+                 radial-gradient(circle at 80% 10%,rgba(73,217,197,.12),transparent 35%)
+    }
+    .portrait img{
+      border-radius:16px;aspect-ratio:3/4;object-fit:cover;
+      transform:scale(1);transition:transform .4s ease;max-height:420px
+    }
+    .portrait:hover img{transform:scale(1.02)}
+    section{padding:22px 0}
+    .sec{
+      padding:20px;background:var(--card2);
+      border:1px solid rgba(255,255,255,.06);border-radius:20px
+    }
+    h2{margin:0 0 14px;font-size:1.25rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .span6{grid-column:span 6}
+    .span4{grid-column:span 4}
+    .span12{grid-column:span 12}
+    .tag{
+      display:inline-block;padding:8px 12px;margin:0 8px 8px 0;
+      border-radius:999px;background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.06);color:#d8e2ff;font-size:.92rem
+    }
+    .timeline{display:grid;gap:12px}
+    .item{
+      padding:12px;border-radius:14px;background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.04)
+    }
+    .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+    .item ul{margin:10px 0 0;padding-left:18px;color:#dce4fb;line-height:1.7}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .stat{
+      padding:14px;border-radius:12px;background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.04)
+    }
+    .num{font-size:1.5rem;font-weight:800;color:#fff}
+    .label{color:var(--muted);font-size:.9rem;margin-top:6px}
+    .blog{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .post{overflow:hidden}
+    .post .ph{
+      height:160px;background-size:cover;background-position:center;border-radius:12px
+    }
+    .content{padding:12px}
+    .foot{padding:30px 0 50px;color:var(--muted);text-align:center}
+    .reveal{
+      opacity:0;transform:translateY(26px);
+      transition:all .65s ease
+    }
+    .reveal.show{opacity:1;transform:translateY(0)}
+    .exp-toggle{
+      width:100%;text-align:left;background:transparent;border:none;padding:12px 14px;
+      border-radius:12px;font-weight:700;color:var(--text);cursor:pointer;font-size:1rem
+    }
+    .exp-toggle:hover{background:rgba(124,140,255,.03)}
+    .exp-toggle:focus{outline:2px solid rgba(124,140,255,.18);outline-offset:3px}
+    .exp-panel{
+      padding:12px 14px;margin-top:8px;border-radius:12px;
+      background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04)
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .span6,.span4{grid-column:span 12}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .blog{grid-template-columns:1fr}
+      .menu{display:none}
+      .portrait{margin-left:0;max-width:100%}
+    }
+    @media (max-width: 560px){
+      .stats{grid-template-columns:1fr}
+      .navin{padding:14px 0}
+      .hero{padding-top:24px}
+      .actions{flex-direction:column}
+      .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap navin">
+      <div class="brand">UDHAYAKUMAR V</div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero reveal">
+      <div>
+        <span class="pill">Talent Acquisition Leader • Chennai, India</span>
+        <h1 class="grad">Building hiring excellence with strategy, analytics, and AI-enabled recruitment.</h1>
+        <p class="lead">
+          12+ years across Product Engineering, Digital Transformation, Consulting, BFSI and IT Services,
+          delivering high-volume and niche hiring with stakeholder partnership, governance and talent intelligence.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn alt" href="#experience">View Experience</a>
+          <a class="btn download" href="Files/UDHAYAKUMAR V_2026E.pdf" download="Udhayakumar_V_CV.pdf">Download CV</a>
+        </div>
+      </div>
+
+      <div class="card portrait">
+        <img src="Images/udhaya_1.jpg" alt="Professional portrait placeholder">
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="sec">
+        <h2>Professional Profile</h2>
+        <p class="lead">
+          Talent Acquisition Leader with 12+ years of experience driving recruitment strategy, hiring delivery,
+          and talent acquisition operations. Progressed from IT Recruiter to leadership roles through consistent
+          delivery, workforce planning, recruitment governance, analytics, and stakeholder management.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal grid">
+      <div class="sec span6">
+        <h2>Core Competencies</h2>
+        <div>
+          <span class="tag">Talent Acquisition Leadership</span>
+          <span class="tag">Recruitment Operations</span>
+          <span class="tag">Workforce Planning</span>
+          <span class="tag">Demand Forecasting</span>
+          <span class="tag">Stakeholder Management</span>
+          <span class="tag">Hiring Governance</span>
+          <span class="tag">AI-Enabled Recruitment</span>
+          <span class="tag">Talent Intelligence</span>
+          <span class="tag">Recruitment Analytics</span>
+          <span class="tag">DEI Hiring</span>
+        </div>
+      </div>
+
+      <div class="sec span6">
+        <h2>Highlights</h2>
+        <div class="stats">
+          <div class="stat"><div class="num">700+</div><div class="label">Technology & leadership hires</div></div>
+          <div class="stat"><div class="num">110+</div><div class="label">Concurrent requirements managed</div></div>
+          <div class="stat"><div class="num">185+</div><div class="label">Offer discussions managed</div></div>
+          <div class="stat"><div class="num">15+</div><div class="label">Recruiters mentored</div></div>
+        </div>
+      </div>
+
+      <div class="sec span12">
+        <h2>Technology Stack / Hiring Domains</h2>
+        <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+          <div class="stat">
+            <div class="num" style="font-size:1rem">Technology Hiring</div>
+            <div class="label">Java, Python, Full Stack, ReactJS, Angular, Cloud & DevOps, Cyber Security, Data Engineering, AI/ML, Enterprise Architecture, Product Engineering, Program Management</div>
+          </div>
+          <div class="stat">
+            <div class="num" style="font-size:1rem">Domain Expertise</div>
+            <div class="label">BFSI, Capital Markets, Retail & E-Commerce, Automotive, Healthcare, Aviation, Digital Marketing, Digital Commerce</div>
+          </div>
+          <div class="stat">
+            <div class="num" style="font-size:1rem">Tools & Platforms</div>
+            <div class="label">Oracle Fusion, Jira, Darwinbox, iCIMS, SmartRecruiters, LinkedIn Recruiter, Naukri, Power BI, Excel, HackerRank, Mettl, SAP Fieldglass</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <div class="sec">
+        <h2>Professional Experience</h2>
+        <div id="exp-accordion" class="timeline" role="tablist" aria-multiselectable="false">
+          <div class="item">
+            <button class="exp-toggle" aria-expanded="false" aria-controls="panel-photon" id="tab-photon">Photon Interactive — Lead, Talent Acquisition</button>
+            <div id="panel-photon" class="exp-panel" role="region" aria-labelledby="tab-photon" hidden>
+              <div class="meta">May 2024 – Present | Company size: 7,500+</div>
+              <ul>
+                <li>Lead recruitment for strategic technology, cyber security, architecture and leadership hiring across India.</li>
+                <li>Manage 110+ concurrent requirements across business units and customer accounts.</li>
+                <li>Developed recruitment dashboards using Jira and Advanced Excel (XLOOKUP, Pivot Tables).</li>
+                <li>Established recruitment WAR Rooms and leveraged AI for screening frameworks, scorecards and talent mapping.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <button class="exp-toggle" aria-expanded="false" aria-controls="panel-omnicom" id="tab-omnicom">Omnicom Media Group — Senior Consultant, Recruitment</button>
+            <div id="panel-omnicom" class="exp-panel" role="region" aria-labelledby="tab-omnicom" hidden>
+              <div class="meta">Jul 2023 – Mar 2024 | Company size: 4,000+</div>
+              <ul>
+                <li>Partnered with business leaders on workforce planning and hiring strategy across technology, creative and business functions.</li>
+                <li>Managed end-to-end recruitment delivery, talent mapping, sourcing, assessments, offers and onboarding.</li>
+                <li>Conducted 185+ offer discussions while maintaining strong acceptance and joining ratios.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <button class="exp-toggle" aria-expanded="false" aria-controls="panel-publicis" id="tab-publicis">Publicis Sapient — Senior Talent Acquisition Specialist</button>
+            <div id="panel-publicis" class="exp-panel" role="region" aria-labelledby="tab-publicis" hidden>
+              <div class="meta">May 2021 – Nov 2022 | Company size: 20,000+</div>
+              <ul>
+                <li>Managed strategic technology hiring across engineering and digital transformation practices.</li>
+                <li>Built and maintained talent pipelines for niche and high-demand technology skill sets.</li>
+                <li>Supported DEI initiatives and recruitment reporting using Power BI and SharePoint.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <button class="exp-toggle" aria-expanded="false" aria-controls="panel-technosoft" id="tab-technosoft">Technosoft Corporation (Now Apexon) — Senior Talent Acquisition Specialist</button>
+            <div id="panel-technosoft" class="exp-panel" role="region" aria-labelledby="tab-technosoft" hidden>
+              <div class="meta">Oct 2019 – Apr 2021</div>
+              <ul>
+                <li>Managed recruitment for strategic client accounts including Ford Motors, PayPal, World Bank Group and ACL Digital.</li>
+                <li>Led requirement analysis, hiring strategy sessions and coordinated recruiters on sourcing and prioritization.</li>
+                <li>Delivered niche and enterprise hiring across Automotive, BFSI, Product Engineering and Consulting domains.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <button class="exp-toggle" aria-expanded="false" aria-controls="panel-sensiple" id="tab-sensiple">Sensiple Software — Lead, Talent Acquisition Specialist</button>
+            <div id="panel-sensiple" class="exp-panel" role="region" aria-labelledby="tab-sensiple" hidden>
+              <div class="meta">Aug 2016 – Oct 2019</div>
+              <ul>
+                <li>Led a recruitment team supporting corporate and product hiring initiatives.</li>
+                <li>Translated workforce demand into hiring plans, managed recruitment operations and onboarding coordination.</li>
+                <li>Trained and mentored 15+ recruiters on sourcing, talent mapping and candidate assessment.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <button class="exp-toggle" aria-expanded="false" aria-controls="panel-idc" id="tab-idc">IDC Technologies — IT Recruiter</button>
+            <div id="panel-idc" class="exp-panel" role="region" aria-labelledby="tab-idc" hidden>
+              <div class="meta">May 2014 – Jul 2016</div>
+              <ul>
+                <li>Managed end-to-end recruitment for India-based technology hiring across application development, infrastructure and enterprise technology domains.</li>
+                <li>Utilized Boolean & X-Ray searches, LinkedIn, Naukri, Monster and internal databases for sourcing.</li>
+                <li>Coordinated screening, interview scheduling, salary discussions and offer follow-ups.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <button class="exp-toggle" aria-expanded="false" aria-controls="panel-eloka" id="tab-eloka">Eloka Enterprises — Technical Engineer</button>
+            <div id="panel-eloka" class="exp-panel" role="region" aria-labelledby="tab-eloka" hidden>
+              <div class="meta">2012 – 2014</div>
+              <ul>
+                <li>Worked on networking infrastructure projects involving routers, switches, sensors and connectivity solutions.</li>
+                <li>Built a technical understanding of infrastructure technologies that supported later technology hiring expertise.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="reveal grid">
+      <div class="sec span4">
+        <h2>Selected Achievements</h2>
+        <ul>
+          <li>Delivered 700+ technology & leadership hires.</li>
+          <li>Managed 110+ concurrent requirements.</li>
+          <li>Conducted 185+ offer discussions with strong acceptance ratios.</li>
+          <li>Established recruitment WAR Rooms and AI-enabled assessments.</li>
+        </ul>
+      </div>
+
+      <div class="sec span4">
+        <h2>Education</h2>
+        <ul>
+          <li>MBA – HR Management (Pursuing), VIT Business School</li>
+          <li>B.Tech IT, Anna University (2011)</li>
+        </ul>
+      </div>
+
+      <div class="sec span4">
+        <h2>Certifications</h2>
+        <ul>
+          <li>LinkedIn Recruiter Assessment</li>
+          <li>Microsoft Excel – Advanced Formulas & Functions</li>
+          <li>Python Programming – Foundation Level</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="sec">
+        <h2>Blog Style Samples</h2>
+        <div class="blog">
+          <article class="card post">
+            <div class="ph" style="background-image:linear-gradient(135deg,rgba(124,140,255,.35),rgba(73,217,197,.25)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80')"></div>
+            <div class="content">
+              <strong>Recruitment Strategy</strong>
+              <p class="lead">Showcase your leadership in workforce planning, delivery governance, and hiring velocity.</p>
+            </div>
+          </article>
+          <article class="card post">
+            <div class="ph" style="background-image:linear-gradient(135deg,rgba(124,140,255,.35),rgba(73,217,197,.25)),url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80')"></div>
+            <div class="content">
+              <strong>AI in Hiring</strong>
+              <p class="lead">Highlight AI-assisted assessments, market mapping, and structured scorecards.</p>
+            </div>
+          </article>
+          <article class="card post">
+            <div class="ph" style="background-image:linear-gradient(135deg,rgba(124,140,255,.35),rgba(73,217,197,.25)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80')"></div>
+            <div class="content">
+              <strong>Leadership Profile</strong>
+              <p class="lead">Present your career journey, achievements and stakeholder impact clearly.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="sec">
+        <h2>Contact</h2>
+        <p class="lead">
+          LinkedIn: <a href="https://www.linkedin.com/in/udhaya1212/" target="_blank" rel="noopener">linkedin.com/in/udhaya1212</a>
+          · GitHub: <a href="https://github.com/Coding-kumar" target="_blank" rel="noopener">github.com/Coding-kumar</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">© 2026 Udhayakumar V</footer>
+
+  <script>
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      const el = document.querySelector(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }));
+
+    (function(){
+      const accordion = document.getElementById('exp-accordion');
+      if(!accordion) return;
+      const buttons = Array.from(accordion.querySelectorAll('.exp-toggle'));
+
+      function closeAll(exceptBtn){
+        buttons.forEach(btn => {
+          if(btn === exceptBtn) return;
+          const panel = document.getElementById(btn.getAttribute('aria-controls'));
+          btn.setAttribute('aria-expanded','false');
+          if(panel) panel.hidden = true;
+        });
+      }
+
+      buttons.forEach(btn => {
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          if(!isOpen){
+            closeAll(btn);
+            btn.setAttribute('aria-expanded','true');
+            if(panel) panel.hidden = false;
+            if(window.innerWidth < 700) panel.scrollIntoView({behavior:'smooth',block:'start'});
+          } else {
+            btn.setAttribute('aria-expanded','false');
+            if(panel) panel.hidden = true;
+          }
+        });
+
+        btn.addEventListener('keydown', (e) => {
+          if(e.key === 'Enter' || e.key === ' '){
+            e.preventDefault();
+            btn.click();
+          }
+          if(e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+            e.preventDefault();
+            const idx = buttons.indexOf(btn);
+            const next = e.key === 'ArrowDown' ? (idx+1)%buttons.length : (idx-1+buttons.length)%buttons.length;
+            buttons[next].focus();
+          }
+          if(e.key === 'Home'){ e.preventDefault(); buttons[0].focus(); }
+          if(e.key === 'End'){ e.preventDefault(); buttons[buttons.length-1].focus(); }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
